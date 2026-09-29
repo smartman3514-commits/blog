@@ -1,0 +1,55 @@
+<svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Malgun Gothic',sans-serif">
+  <rect width="900" height="460" fill="#faf9f6"/>
+
+  <!-- Question -->
+  <rect x="360" y="20" width="180" height="56" rx="12" fill="#ffffff" stroke="#c9c4b6" stroke-width="1.5"/>
+  <text x="450" y="54" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2a27">질문 입력</text>
+
+  <!-- arrow down to coordinator -->
+  <path d="M450 76 L450 110" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coordinator dispatch -->
+  <rect x="320" y="112" width="260" height="70" rx="12" fill="#f2c9a8" stroke="#dba872" stroke-width="1.5"/>
+  <text x="450" y="140" text-anchor="middle" font-size="16" font-weight="800" fill="#7a3a22">코디네이터</text>
+  <text x="450" y="162" text-anchor="middle" font-size="13" fill="#7a3a22">① 구역 판단 (dispatch)</text>
+
+  <!-- arrows fan out to 3 subagents -->
+  <path d="M400 182 L180 230" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M450 182 L450 230" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M500 182 L720 230" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="450" y="205" text-anchor="middle" font-size="12" fill="#8a5a2a">필요한 구역만 병렬로 위임</text>
+
+  <!-- 3 subagents -->
+  <rect x="60" y="232" width="240" height="64" rx="12" fill="#ece6d6" stroke="#c7bd9e" stroke-width="1.5"/>
+  <text x="180" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#5c5640">세금법 서브에이전트</text>
+  <text x="180" y="278" text-anchor="middle" font-size="12" fill="#5c5640">과세표준·세율 조사</text>
+
+  <rect x="330" y="232" width="240" height="64" rx="12" fill="#ece6d6" stroke="#c7bd9e" stroke-width="1.5"/>
+  <text x="450" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#5c5640">계좌구조 서브에이전트</text>
+  <text x="450" y="278" text-anchor="middle" font-size="12" fill="#5c5640">종합과세·건보료 조사</text>
+
+  <rect x="600" y="232" width="240" height="64" rx="12" fill="#ece6d6" stroke="#c7bd9e" stroke-width="1.5"/>
+  <text x="720" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#5c5640">FABOT 로그 서브에이전트</text>
+  <text x="720" y="278" text-anchor="middle" font-size="12" fill="#5c5640">실제 배당·매매 기록 조사</text>
+
+  <!-- arrows converge back -->
+  <path d="M180 296 L400 344" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M450 296 L450 344" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M720 296 L500 344" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coordinator aggregate/review -->
+  <rect x="310" y="346" width="280" height="70" rx="12" fill="#cbe3b8" stroke="#a0c987" stroke-width="1.5"/>
+  <text x="450" y="374" text-anchor="middle" font-size="16" font-weight="800" fill="#3f5c2c">코디네이터</text>
+  <text x="450" y="396" text-anchor="middle" font-size="13" fill="#3f5c2c">② 종합 · 점검 (부족하면 재조사)</text>
+
+  <path d="M450 416 L450 444" stroke="#a39c88" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="450" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2a27">최종 답변</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a39c88"/>
+    </marker>
+  </defs>
+</svg>
