@@ -44,10 +44,10 @@ excerpt: "LangGraph 워크플로 설계, 뉴스레터, 라우팅·그라운딩, 
 한국영화 지식그래프 에이전트에서는 인물·영화·수상·배급사를 노드로, "감독했다"·"수상했다" 같은 관계를
 엣지로 놓고, 멀티홉 질의(봉준호가 감독한 영화 중 대종상을 받은 건?)를 그래프 탐색으로 풀었다.
 
-![시네필 지식그래프 뷰어](/assets/2026-09-29-agent-team/graphrag-graph-view.jpg)
+![시네필 지식그래프 뷰어]({{ site.baseurl }}/assets/2026-09-29-agent-team/graphrag-graph-view.jpg)
 *189개 노드(인물·영화·장르·시상식·제작사·국가) · 723개 관계 — 위키백과+나무위키 문서 191건에서 실제로 뽑은 그래프*
 
-![GraphRAG 영화 추천 데모](/assets/2026-09-29-agent-team/graphrag-movie-demo.png)
+![GraphRAG 영화 추천 데모]({{ site.baseurl }}/assets/2026-09-29-agent-team/graphrag-movie-demo.png)
 *같은 그래프를 실제로 탐색한 결과 — 노드·관계를 따라간 근거 경로까지 함께 보여준다*
 
 이건 아직 FABOT에 직접 넣지는 않았다. 하지만 넣을 자리는 보인다 — 지금 딥리서처는 "어느 구역
@@ -61,12 +61,12 @@ excerpt: "LangGraph 워크플로 설계, 뉴스레터, 라우팅·그라운딩, 
 계좌구조 9 + FABOT 로그 18 + FABOT 문서 7 + 실측 배당 자료)를 놓고, 코디네이터가 dispatch →
 서브에이전트 병렬 조사 → 종합 → 점검(부족하면 재조사) 순서로 오케스트레이션한다.
 
-![코디네이터-서브에이전트 흐름도](/assets/2026-09-29-agent-team/diagram-coordinator-subagent.svg)
+![코디네이터-서브에이전트 흐름도]({{ site.baseurl }}/assets/2026-09-29-agent-team/diagram-coordinator-subagent.svg)
 *코디네이터가 구역을 판단해 서브에이전트에 병렬로 위임하고, 다시 종합·점검한다*
 
 실제로 질문을 넣으면 이렇게 진행되는 게 화면에 그대로 보인다:
 
-![딥리서처 실시간 진행 화면](/assets/2026-09-29-agent-team/deep-researcher-live.jpg)
+![딥리서처 실시간 진행 화면]({{ site.baseurl }}/assets/2026-09-29-agent-team/deep-researcher-live.jpg)
 *세금·FABOT 딥리서처 — 서브에이전트가 각 구역을 조사하는 중*
 
 ## 5. LangGraph 워크플로 설계 → FABOT 매매 승인(HITL)
@@ -76,12 +76,12 @@ FABOT의 최종 목표는 사람 승인 없이 완전 자동으로 신호→주�
 세 가지(매수 비중 100%, 매도 전량, 쿨다운 예외 해제 매수)만 `interrupt()`로 멈추고, 나머지는 그냥
 통과시킨다.
 
-![HITL 승인 흐름도](/assets/2026-09-29-agent-team/diagram-hitl-approval.svg)
+![HITL 승인 흐름도]({{ site.baseurl }}/assets/2026-09-29-agent-team/diagram-hitl-approval.svg)
 *AI 판정 → 위험 기준 판별 → interrupt() → 사람의 승인/수정/반려/재판정*
 
 실제로 F&G 12점(TQQQ 매수 100%) 신호를 넣으면 이렇게 멈춘다:
 
-![승인 대기 화면](/assets/2026-09-29-agent-team/hitl-approval-pending.jpg)
+![승인 대기 화면]({{ site.baseurl }}/assets/2026-09-29-agent-team/hitl-approval-pending.jpg)
 *FABOT 매매 승인 데모 — 승인 대기 화면*
 
 여기서 제일 크게 배운 건 `interrupt()`가 멈췄다 재개될 때 그 노드를 **처음부터 다시 실행**한다는
