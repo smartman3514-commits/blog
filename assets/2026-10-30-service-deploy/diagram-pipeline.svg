@@ -1,0 +1,77 @@
+<svg width="940" height="360" viewBox="0 0 940 360" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Malgun Gothic',sans-serif" role="img" aria-label="코드가 운영에 나가기까지 거치는 단계와 품질 게이트">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#a39c88"/>
+    </marker>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#b2452f"/>
+    </marker>
+  </defs>
+  <rect width="940" height="360" fill="#faf9f6"/>
+
+  <!-- row 1 -->
+  <text x="30" y="28" font-size="13" font-weight="700" fill="#7a7466">① 만들고 확인하기</text>
+  <rect x="30" y="40" width="190" height="70" rx="12" fill="#ffffff" stroke="#c9c4b6" stroke-width="1.5"/>
+  <text x="125" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2a27">내 PC · 작업 브랜치</text>
+  <text x="125" y="92" text-anchor="middle" font-size="12" fill="#6b665a">Dockerfile로 같은 환경</text>
+
+  <path d="M220 75 L256 75" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="260" y="40" width="190" height="70" rx="12" fill="#dbe8f5" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text x="355" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#23466b">PR → CI 테스트</text>
+  <text x="355" y="92" text-anchor="middle" font-size="12" fill="#23466b">서버와 같은 UTC 러너</text>
+
+  <path d="M450 75 L486 75" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="490" y="40" width="190" height="70" rx="12" fill="#ffffff" stroke="#c9c4b6" stroke-width="1.5"/>
+  <text x="585" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2a27">staging</text>
+  <text x="585" y="92" text-anchor="middle" font-size="12" fill="#6b665a">이미지를 한 번만 빌드</text>
+
+  <path d="M680 75 L716 75" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="720" y="40" width="190" height="70" rx="12" fill="#dbe8f5" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text x="815" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#23466b">사람 승인</text>
+  <text x="815" y="92" text-anchor="middle" font-size="12" fill="#23466b">staging 화면을 보고 누름</text>
+
+  <!-- connector to row 2 -->
+  <path d="M815 110 L815 150 L105 150 L105 206" stroke="#a39c88" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="460" y="143" text-anchor="middle" font-size="12" fill="#7a7466">같은 이미지(다이제스트)를 운영으로</text>
+
+  <!-- row 2 -->
+  <text x="118" y="198" font-size="13" font-weight="700" fill="#7a7466">② 손님에게 조금씩 내보내기</text>
+  <rect x="30" y="210" width="150" height="70" rx="12" fill="#ffffff" stroke="#c9c4b6" stroke-width="1.5"/>
+  <text x="105" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2a27">운영에 0%로</text>
+  <text x="105" y="262" text-anchor="middle" font-size="12" fill="#6b665a">손님은 아직 옛 버전</text>
+
+  <path d="M180 245 L211 245" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="215" y="210" width="150" height="70" rx="12" fill="#dbe8f5" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text x="290" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#23466b">스모크 테스트</text>
+  <text x="290" y="262" text-anchor="middle" font-size="12" fill="#23466b">켜졌나 · 그 버전인가</text>
+
+  <path d="M365 245 L396 245" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="400" y="210" width="150" height="70" rx="12" fill="#dbe8f5" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text x="475" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#23466b">카나리 10%</text>
+  <text x="475" y="262" text-anchor="middle" font-size="12" fill="#23466b">2분 · 실패율 · p95</text>
+
+  <path d="M550 245 L581 245" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="585" y="210" width="150" height="70" rx="12" fill="#dbe8f5" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text x="660" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#23466b">카나리 50%</text>
+  <text x="660" y="262" text-anchor="middle" font-size="12" fill="#23466b">2분 더 같은 검사</text>
+
+  <path d="M735 245 L766 245" stroke="#a39c88" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="770" y="210" width="140" height="70" rx="12" fill="#cbe3b8" stroke="#a0c987" stroke-width="1.5"/>
+  <text x="840" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#3f5c2c">100% 전환</text>
+  <text x="840" y="262" text-anchor="middle" font-size="12" fill="#3f5c2c">새 버전이 본점에</text>
+
+  <!-- rollback -->
+  <path d="M567 280 L567 318 L105 318 L105 284" stroke="#b2452f" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arr)"/>
+  <text x="336" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#b2452f">기준을 넘으면 → 이전 버전 100%로 자동 롤백</text>
+
+  <!-- legend -->
+  <rect x="700" y="318" width="16" height="16" rx="4" fill="#dbe8f5" stroke="#8fb0d4"/>
+  <text x="724" y="331" font-size="12" fill="#4a4639">= 멈춰 세울 수 있는 자리(품질 게이트)</text>
+</svg>
